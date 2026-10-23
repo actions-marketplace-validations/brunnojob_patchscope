@@ -1,0 +1,35 @@
+name: PatchScope diff review
+description: Generate a local heuristic review checklist from a unified diff. No API token or AI service required.
+author: brunnodev
+branding:
+  icon: git-pull-request
+  color: purple
+inputs:
+  diff-file:
+    description: Path to an existing unified diff file
+    required: true
+  summary:
+    description: Append the Markdown review to the GitHub Actions job summary
+    default: 'true'
+outputs:
+  report-json:
+    description: Path to the generated JSON report
+    value: ${{ steps.review.outputs.report-json }}
+  report-markdown:
+    description: Path to the generated Markdown report
+    value: ${{ steps.review.outputs.report-markdown }}
+  high-count:
+    description: Number of high-priority heuristic prompts
+    value: ${{ steps.review.outputs.high-count }}
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+    - id: review
+      shell: bash
+      env:
+        INPUT_DIFF_FILE: ${{ inputs.diff-file }}
+        INPUT_SUMMARY: ${{ inputs.summary }}
+      run: node "$GITHUB_ACTION_PATH/scripts/action.mjs"

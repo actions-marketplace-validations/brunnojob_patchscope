@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#f6f5f1" />
+    <meta
+      name="description"
+      content="Turn a Git diff into an actionable review checklist. PatchScope runs locally in your browser, CLI and GitHub Actions. No uploads. No AI keys."
+    />
+    <meta property="og:title" content="PatchScope — Know where to look." />
+    <meta
+      property="og:description"
+      content="A small, local-first tool for the parts of a patch that deserve a closer look."
+    />
+    <meta property="og:image" content="https://brunnojob.github.io/patchscope/docs/social.png"><meta name="twitter:card" content="summary_large_image"><meta property="og:type" content="website" />
+    <meta property="og:url" content="https://brunnojob.github.io/patchscope/" />
+    <link rel="canonical" href="https://brunnojob.github.io/patchscope/"><title>PatchScope — Know where to look.</title>
+    <link rel="icon" type="image/svg+xml" href="./docs/icon.svg" />
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#workspace">Skip to review workspace</a>
+    <header class="nav">
+      <a class="wordmark" href="./" aria-label="PatchScope home"
+        ><span class="logo">⤢</span>PatchScope<span class="tag">v1.0</span></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#how">How it works</a
+        ><a href="https://github.com/brunnojob/patchscope#github-actions"
+          >GitHub Action</a
+        ><a
+          class="star-link"
+          href="https://github.com/brunnojob/patchscope"
+          target="_blank"
+          rel="noopener"
+          >Star on GitHub <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <span class="eyebrow"
+            ><span class="live-dot"></span> CODE REVIEW, WITH A HEAD START</span
+          >
+          <h1>Big diff?<br /><em>Know where to look.</em></h1>
+          <p>
+            Turn a patch into a focused review checklist. Spot changes that
+            deserve a closer look, understand why, and take the next step.
+          </p>
+          <div class="hero-actions">
+            <a class="primary" href="#workspace">Try a patch <span>↓</span></a
+            ><button id="tryDemo" class="text-button">
+              Explore the example ↗
+            </button>
+          </div>
+          <div class="trust">
+            <span>Runs in your browser</span><span>No uploads</span
+            ><span>No AI keys</span>
+          </div>
+        </div>
+        <div class="hero-card" aria-label="Example of a review prompt">
+          <div class="card-top">
+            <span class="status-dot"></span>REVIEW SIGNAL <span>01 / 04</span>
+          </div>
+          <div class="code-preview">
+            <span class="code-muted">.github/workflows/deploy.yml</span>
+            <div><b>−</b> <span>permissions: read-all</span></div>
+            <div class="code-added">
+              <b>+</b> <span>permissions: write-all</span>
+            </div>
+          </div>
+          <div class="signal">
+            <span class="severity high">HIGH</span>
+            <h2>A wider permission boundary.</h2>
+            <p>
+              Review token permissions and the code this workflow can execute.
+            </p>
+            <span class="signal-foot"
+              >A prompt for a human. Not a verdict.</span
+            >
+          </div>
+          <div class="card-bottom">
+            <span>LOCAL ANALYSIS</span><span>ZERO DEPENDENCIES ↗</span>
+          </div>
+        </div>
+      </section>
+      <section id="workspace" class="workspace" aria-label="Review workspace">
+        <div class="workspace-header">
+          <div>
+            <span class="eyebrow">01 / THE WORKSPACE</span>
+            <h2>A little context goes a long way.</h2>
+          </div>
+          <span id="localStatus" class="local-badge"
+            ><span class="live-dot"></span> Code stays on this device</span
+          >
+        </div>
+        <div class="input-layout">
+          <section class="input-panel">
+            <div class="panel-title">
+              <h3>Your patch</h3>
+              <div>
+                <button id="openFile" class="mini-button">Open .diff</button
+                ><button id="clear" class="mini-button">Clear</button>
+              </div>
+            </div>
+            <label class="sr-only" for="patch">Unified Git diff</label
+            ><textarea
+              id="patch"
+              placeholder="Paste a unified diff here, or drop a .diff / .patch file.&#10;&#10;git diff --no-ext-diff --no-color HEAD"
+              spellcheck="false"
+            ></textarea>
+            <div class="input-bottom">
+              <span id="inputSize">0 characters · up to 2 MB</span
+              ><button id="analyze" class="primary">
+                Analyze patch <span>↗</span>
+              </button>
+            </div>
+            <input
+              id="fileInput"
+              type="file"
+              accept=".diff,.patch,.txt,text/plain"
+              hidden
+            />
+          </section>
+          <aside class="examples-panel">
+            <span class="eyebrow">NOTHING TO PASTE YET?</span>
+            <h3>Start with a real-shaped example.</h3>
+            <button data-example="release">
+              <span class="example-number">01</span
+              ><span
+                ><b>A risky release</b
+                ><small
+                  >Workflow permissions, migration, deleted tests</small
+                ></span
+              ><span>↗</span></button
+            ><button data-example="tests">
+              <span class="example-number">02</span
+              ><span
+                ><b>A quiet test change</b
+                ><small>An edge case and a skipped test</small></span
+              ><span>↗</span></button
+            ><button data-example="small">
+              <span class="example-number">03</span
+              ><span
+                ><b>A focused docs fix</b
+                ><small>A small patch with no heuristic flags</small></span
+              ><span>↗</span>
+            </button>
+            <p>
+              Deterministic rules. Clear explanations. No generated guesses
+              about your code.
+            </p>
+          </aside>
+        </div>
+        <p id="error" class="error" role="alert" hidden></p>
+        <section id="results" hidden aria-label="Analysis results">
+          <div class="results-heading">
+            <div>
+              <span class="eyebrow">02 / REVIEW MAP</span>
+              <h2 id="resultTitle">Your review starts here.</h2>
+              <p id="resultSubtitle"></p>
+            </div>
+            <div class="export-actions">
+              <button id="copyReport">Copy checklist</button
+              ><button id="downloadMd">Markdown ↓</button
+              ><button id="downloadJson">JSON ↓</button>
+            </div>
+          </div>
+          <div id="stats" class="stats"></div>
+          <p id="warnings" class="warning" hidden></p>
+          <div class="review-layout">
+            <section class="findings-panel">
+              <div class="panel-title">
+                <h3>Review prompts</h3>
+                <label
+                  >Show
+                  <select id="filter" aria-label="Filter review prompts">
+                    <option value="all">All signals</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="info">Info</option>
+                  </select></label
+                >
+              </div>
+              <div id="findings"></div>
+              <div class="scope-note">
+                These are heuristic prompts, not a security audit. A patch with
+                no flags still needs a human review and relevant tests.
+              </div>
+            </section>
+            <section class="diff-panel">
+              <div class="panel-title">
+                <h3>Patch explorer</h3>
+                <span>READ ONLY</span>
+              </div>
+              <label class="file-picker"
+                >File<select
+                  id="filePicker"
+                  aria-label="Select file to inspect"
+                ></select
+              ></label>
+              <div id="diff" tabindex="0" aria-label="Selected file diff"></div>
+              <div class="scope-note">
+                Reports include file names and prompts. Raw code and detected
+                credential values are excluded.
+              </div>
+            </section>
+          </div>
+          <div class="share-banner">
+            <div>
+              <strong>Useful in your next review?</strong
+              ><span>Keep the project handy, or help improve the rules.</span>
+            </div>
+            <a
+              href="https://github.com/brunnojob/patchscope"
+              target="_blank"
+              rel="noopener"
+              >Star or contribute on GitHub ↗</a
+            >
+          </div>
+        </section>
+      </section>
+      <section id="how" class="how">
+        <div>
+          <span class="eyebrow">SMALL TOOL. PRACTICAL PLACES.</span>
+          <h2>One engine.<br />Three ways to review.</h2>
+          <p>
+            No account, model subscription or runtime package installation
+            required.
+          </p>
+        </div>
+        <div class="usage-cards">
+          <article>
+            <span>01 / BROWSER</span>
+            <h3>Before you click merge.</h3>
+            <p>
+              Paste a patch, explore signals and take a checklist to your pull
+              request.
+            </p>
+            <code>git diff --no-color HEAD</code>
+          </article>
+          <article>
+            <span>02 / TERMINAL</span>
+            <h3>Inside your own workflow.</h3>
+            <p>
+              Run the same engine locally and generate Markdown or JSON reports.
+            </p>
+            <code>node scripts/cli.mjs change.diff</code>
+          </article>
+          <article>
+            <span>03 / GITHUB ACTIONS</span>
+            <h3>At the pull request.</h3>
+            <p>
+              Generate a job summary and report files with a reusable composite
+              action.
+            </p>
+            <a href="https://github.com/brunnojob/patchscope#github-actions"
+              >Read the setup ↗</a
+            >
+          </article>
+        </div>
+      </section>
+      <footer>
+        <a class="wordmark" href="./"><span class="logo">⤢</span>PatchScope</a>
+        <p>
+          Open source. MIT licensed.<br />Built by
+          <a href="https://brunnodev.store">brunnodev</a>.
+        </p>
+        <div>
+          <a href="https://github.com/brunnojob/patchscope">Source code ↗</a
+          ><span
+            >No analytics. No code uploads. Your patch is held in memory until
+            you clear or close the page.</span
+          >
+        </div>
+      </footer>
+    </main>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

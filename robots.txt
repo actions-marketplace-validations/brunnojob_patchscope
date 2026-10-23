@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://brunnojob.github.io/patchscope/sitemap.xml

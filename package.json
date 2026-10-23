@@ -1,0 +1,16 @@
+{
+  "name": "patchscope",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-first Git diff triage for humans. Browser, CLI and GitHub Actions.",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node --test",
+    "demo": "node scripts/cli.mjs docs/example.diff --format markdown"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
