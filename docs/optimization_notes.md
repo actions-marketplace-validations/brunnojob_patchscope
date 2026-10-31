@@ -532,3 +532,5 @@
 
 * [2026-10-31 01:54:13] format applied to inline comments (Ref: cf015436-17)
 
+* [2026-10-31 01:54:13] format applied to internal configs (Ref: cf015436-18)
+
