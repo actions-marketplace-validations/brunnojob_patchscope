@@ -404,3 +404,5 @@
 
 * [2026-10-31 01:53:52] improve applied to internal configs (Ref: d3f36c73-3)
 
+* [2026-10-31 01:53:52] improve applied to module structure (Ref: d3f36c73-4)
+
