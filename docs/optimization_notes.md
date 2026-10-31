@@ -558,3 +558,5 @@
 
 * [2026-10-31 01:54:16] format applied to internal configs (Ref: cf015436-30)
 
+* [2026-10-31 01:54:16] format applied to utilities (Ref: cf015436-31)
+
