@@ -568,3 +568,5 @@
 
 * [2026-10-31 01:54:17] clean applied to utilities (Ref: cf015436-35)
 
+* [2026-10-31 01:54:18] format applied to internal configs (Ref: cf015436-36)
+
