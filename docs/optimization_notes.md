@@ -276,3 +276,5 @@
 
 * [2026-10-31 01:53:18] clean applied to internal configs (Ref: ceca4f7b-39)
 
+* [2026-10-31 01:53:19] improve applied to inline comments (Ref: ceca4f7b-40)
+
