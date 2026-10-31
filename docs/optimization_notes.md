@@ -6,3 +6,5 @@
 
 * [2026-10-31 01:52:35] format applied to inline comments (Ref: cccb79f1-4)
 
+* [2026-10-31 01:52:35] improve applied to internal configs (Ref: cccb79f1-5)
+
