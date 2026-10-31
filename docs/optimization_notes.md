@@ -62,3 +62,5 @@
 
 * [2026-10-31 01:52:38] format applied to utilities (Ref: cccb79f1-32)
 
+* [2026-10-31 01:52:38] improve applied to inline comments (Ref: cccb79f1-33)
+
