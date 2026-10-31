@@ -454,3 +454,5 @@
 
 * [2026-10-31 01:53:55] update applied to type hints (Ref: d3f36c73-28)
 
+* [2026-10-31 01:53:56] clean applied to internal configs (Ref: d3f36c73-29)
+
