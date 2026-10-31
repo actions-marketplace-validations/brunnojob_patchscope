@@ -252,3 +252,5 @@
 
 * [2026-10-31 01:53:16] clean applied to internal configs (Ref: ceca4f7b-27)
 
+* [2026-10-31 01:53:17] clean applied to utilities (Ref: ceca4f7b-28)
+
