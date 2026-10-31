@@ -654,3 +654,5 @@
 
 * [2026-10-31 02:01:44] clean applied to utilities (Ref: f871f66c-28)
 
+* [2026-10-31 02:01:44] format applied to utilities (Ref: f871f66c-29)
+
