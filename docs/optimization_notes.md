@@ -156,3 +156,5 @@
 
 * [2026-10-31 01:52:56] optimize applied to internal configs (Ref: 204536ea-29)
 
+* [2026-10-31 01:52:56] format applied to internal configs (Ref: 204536ea-30)
+
