@@ -572,3 +572,5 @@
 
 * [2026-10-31 01:54:18] update applied to internal configs (Ref: cf015436-37)
 
+* [2026-10-31 01:54:18] improve applied to internal configs (Ref: cf015436-38)
+
