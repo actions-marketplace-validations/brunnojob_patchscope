@@ -666,3 +666,5 @@
 
 * [2026-10-31 02:01:45] improve applied to internal configs (Ref: f871f66c-34)
 
+* [2026-10-31 02:01:45] improve applied to inline comments (Ref: f871f66c-35)
+
