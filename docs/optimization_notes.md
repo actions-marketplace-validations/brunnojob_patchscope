@@ -312,3 +312,5 @@
 
 * [2026-10-31 01:53:33] improve applied to internal configs (Ref: 8334c4d6-7)
 
+* [2026-10-31 01:53:33] format applied to type hints (Ref: 8334c4d6-8)
+
