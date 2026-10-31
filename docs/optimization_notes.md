@@ -538,3 +538,5 @@
 
 * [2026-10-31 01:54:14] optimize applied to internal configs (Ref: cf015436-20)
 
+* [2026-10-31 01:54:14] format applied to inline comments (Ref: cf015436-21)
+
