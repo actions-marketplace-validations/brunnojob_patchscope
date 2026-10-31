@@ -430,3 +430,5 @@
 
 * [2026-10-31 01:53:54] clean applied to internal configs (Ref: d3f36c73-16)
 
+* [2026-10-31 01:53:54] clean applied to utilities (Ref: d3f36c73-17)
+
