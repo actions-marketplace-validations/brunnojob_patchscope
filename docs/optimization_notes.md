@@ -500,3 +500,5 @@
 
 * [2026-10-31 01:54:10] optimize applied to utilities (Ref: cf015436-1)
 
+* [2026-10-31 01:54:10] clean applied to module structure (Ref: cf015436-2)
+
