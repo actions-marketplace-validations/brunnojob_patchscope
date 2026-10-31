@@ -518,3 +518,5 @@
 
 * [2026-10-31 01:54:12] clean applied to type hints (Ref: cf015436-10)
 
+* [2026-10-31 01:54:12] format applied to utilities (Ref: cf015436-11)
+
