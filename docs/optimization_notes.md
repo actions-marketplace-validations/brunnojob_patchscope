@@ -80,3 +80,5 @@
 
 * [2026-10-31 01:52:39] clean applied to type hints (Ref: cccb79f1-41)
 
+* [2026-10-31 01:52:39] clean applied to utilities (Ref: cccb79f1-42)
+
