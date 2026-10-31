@@ -620,3 +620,5 @@
 
 * [2026-10-31 02:01:42] improve applied to utilities (Ref: f871f66c-11)
 
+* [2026-10-31 02:01:42] improve applied to internal configs (Ref: f871f66c-12)
+
