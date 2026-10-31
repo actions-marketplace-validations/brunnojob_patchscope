@@ -214,3 +214,5 @@
 
 * [2026-10-31 01:53:13] update applied to internal configs (Ref: ceca4f7b-8)
 
+* [2026-10-31 01:53:13] improve applied to inline comments (Ref: ceca4f7b-9)
+
