@@ -306,3 +306,5 @@
 
 * [2026-10-31 01:53:32] format applied to internal configs (Ref: 8334c4d6-4)
 
+* [2026-10-31 01:53:32] clean applied to type hints (Ref: 8334c4d6-5)
+
