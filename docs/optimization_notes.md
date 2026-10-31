@@ -506,3 +506,5 @@
 
 * [2026-10-31 01:54:11] clean applied to utilities (Ref: cf015436-4)
 
+* [2026-10-31 01:54:11] improve applied to inline comments (Ref: cf015436-5)
+
