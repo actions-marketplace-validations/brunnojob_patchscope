@@ -662,3 +662,5 @@
 
 * [2026-10-31 02:01:44] update applied to module structure (Ref: f871f66c-32)
 
+* [2026-10-31 02:01:45] improve applied to internal configs (Ref: f871f66c-33)
+
