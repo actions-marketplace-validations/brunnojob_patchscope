@@ -172,3 +172,5 @@
 
 * [2026-10-31 01:52:57] improve applied to internal configs (Ref: 204536ea-37)
 
+* [2026-10-31 01:52:57] improve applied to inline comments (Ref: 204536ea-38)
+
