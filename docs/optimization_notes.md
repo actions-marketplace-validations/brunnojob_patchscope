@@ -250,3 +250,5 @@
 
 * [2026-10-31 01:53:16] clean applied to type hints (Ref: ceca4f7b-26)
 
+* [2026-10-31 01:53:16] clean applied to internal configs (Ref: ceca4f7b-27)
+
