@@ -346,3 +346,5 @@
 
 * [2026-10-31 01:53:35] update applied to utilities (Ref: 8334c4d6-24)
 
+* [2026-10-31 01:53:35] format applied to internal configs (Ref: 8334c4d6-25)
+
