@@ -274,3 +274,5 @@
 
 * [2026-10-31 01:53:18] improve applied to type hints (Ref: ceca4f7b-38)
 
+* [2026-10-31 01:53:18] clean applied to internal configs (Ref: ceca4f7b-39)
+
