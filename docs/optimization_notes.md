@@ -158,3 +158,5 @@
 
 * [2026-10-31 01:52:56] format applied to internal configs (Ref: 204536ea-30)
 
+* [2026-10-31 01:52:56] format applied to inline comments (Ref: 204536ea-31)
+
