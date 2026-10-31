@@ -678,3 +678,5 @@
 
 * [2026-10-31 02:01:45] format applied to internal configs (Ref: f871f66c-40)
 
+* [2026-10-31 02:01:45] improve applied to inline comments (Ref: f871f66c-41)
+
