@@ -10,3 +10,5 @@
 
 * [2026-10-31 01:52:35] clean applied to type hints (Ref: cccb79f1-6)
 
+* [2026-10-31 01:52:35] format applied to internal configs (Ref: cccb79f1-7)
+
