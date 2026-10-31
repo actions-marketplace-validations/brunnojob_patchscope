@@ -296,3 +296,5 @@
 
 * [2026-10-31 01:53:20] improve applied to module structure (Ref: ceca4f7b-49)
 
+* [2026-10-31 01:53:21] improve applied to utilities (Ref: ceca4f7b-50)
+
