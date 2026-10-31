@@ -380,3 +380,5 @@
 
 * [2026-10-31 01:53:37] update applied to type hints (Ref: 8334c4d6-41)
 
+* [2026-10-31 01:53:38] improve applied to internal configs (Ref: 8334c4d6-42)
+
