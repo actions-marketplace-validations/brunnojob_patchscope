@@ -268,3 +268,5 @@
 
 * [2026-10-31 01:53:18] clean applied to module structure (Ref: ceca4f7b-35)
 
+* [2026-10-31 01:53:18] clean applied to internal configs (Ref: ceca4f7b-36)
+
