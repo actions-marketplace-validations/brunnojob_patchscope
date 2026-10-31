@@ -556,3 +556,5 @@
 
 * [2026-10-31 01:54:16] improve applied to internal configs (Ref: cf015436-29)
 
+* [2026-10-31 01:54:16] format applied to internal configs (Ref: cf015436-30)
+
