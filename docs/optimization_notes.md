@@ -496,3 +496,5 @@
 
 * [2026-10-31 01:53:59] optimize applied to internal configs (Ref: d3f36c73-49)
 
+* [2026-10-31 01:53:59] clean applied to inline comments (Ref: d3f36c73-50)
+
