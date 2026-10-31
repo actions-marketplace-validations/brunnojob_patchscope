@@ -36,3 +36,5 @@
 
 * [2026-10-31 01:52:36] update applied to internal configs (Ref: cccb79f1-19)
 
+* [2026-10-31 01:52:36] improve applied to module structure (Ref: cccb79f1-20)
+
